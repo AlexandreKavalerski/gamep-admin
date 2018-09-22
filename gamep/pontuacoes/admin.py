@@ -11,8 +11,8 @@ from core.models import *
 class AtividadeAlunoInline(admin.TabularInline):
     model = AtividadeAluno
     extra = 0
-    raw_id_fields = ('aluno',)
-    fields = ('aluno', 'perfeccionismo', 'agilidade', 'precisao')
+    # raw_id_fields = ('aluno',)
+    fields = ('perfeccionismo', 'agilidade', 'precisao')
 
 
 @admin.register(Atividade)
@@ -35,8 +35,8 @@ class AtividadeAdmin(admin.ModelAdmin):
     def carregar_dados_alunos(self, request, pk, *args, **kwargs):
         try:
             atividade = Atividade.objects.get(pk=pk)
-            pessoas = Pessoa.objects.all() #futuramente filtrar de acordo com a turma
-            for aluno in pessoas:
+            alunos = Aluno.objects.all().order_by('pessoa__nome') #futuramente filtrar de acordo com a turma
+            for aluno in alunos:
                 atividade_aluno, created = AtividadeAluno.objects.get_or_create(
                     atividade=atividade,
                     aluno=aluno
