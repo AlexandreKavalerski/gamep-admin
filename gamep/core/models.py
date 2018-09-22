@@ -17,3 +17,6 @@ class Professor(models.Model):
 
 class Aluno(models.Model):
     pessoa = models.ForeignKey(Pessoa, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return self.pessoa.nome
