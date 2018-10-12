@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking</title>
+</head>
+<body>
+
+{% for aluno in alunos %}
+
+    <p>{{ aluno.pessoa.nome }}</p>
+    <ul>
+        <li>Precisão: {{ aluno.slots_precisao }}</li>
+        <li>Agilidade: {{ aluno.slots_agilidade }}</li>
+        <li>Perfeição: {{ aluno.slots_perfeccionismo }}</li>
+        <li><b>Total: </b> {{ aluno.total_de_pontos }}</li>
+
+    </ul>
+
+{% endfor %}
+
+
+</body>
+</html>

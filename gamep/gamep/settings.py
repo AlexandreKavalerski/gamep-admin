@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'gamep',
     'core',
     'pontuacoes',
-    'widget_tweaks'
+    'widget_tweaks',
+    'resultados'
 ]
 
 MIDDLEWARE = [

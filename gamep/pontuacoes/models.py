@@ -10,6 +10,10 @@ class Atividade(models.Model):
         return self.nome
 
 
+#class Moeda(models.Model):
+
+
+
 class AtividadeAluno(models.Model):
     aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE, null=True, blank=True)
     atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE, null=True, blank=True)
