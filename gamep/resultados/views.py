@@ -26,4 +26,8 @@ def index(request):
         raise Http404("Nenhum aluno encontrado")
     return render(request, 'resultados/ranking.html', {'alunos': alunos})
 
+def home(request):
+    return render(request, 'resultados/index.html')
 
+def sobre(request):
+    return render(request, 'resultados/about.html')
