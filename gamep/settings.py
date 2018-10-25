@@ -141,7 +141,7 @@ STATIC_URL = '{}/static/'.format(URL_PREFIX)
 MEDIA_URL = '{}/media/'.format(URL_PREFIX)
 
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, '{}/static'.format(URL_PREFIX)),
+    os.path.join(PROJECT_ROOT, 'static'),
     'resultados/templates/static',
 ]
 
