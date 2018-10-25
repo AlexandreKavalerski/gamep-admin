@@ -139,7 +139,7 @@ STATIC_URL = '{}/static/'.format(URL_PREFIX)
 MEDIA_URL = '{}/media/'.format(URL_PREFIX)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, '{}/static'.format(URL_PREFIX)),
     'resultados/templates/static',
 ]
 
