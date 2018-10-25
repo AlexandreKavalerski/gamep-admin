@@ -115,3 +115,5 @@ dmypy.json
 
 # bts_admin
 bts_admin/
+
+staticfiles/
