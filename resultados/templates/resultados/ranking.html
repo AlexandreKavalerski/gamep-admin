@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="pt_BR">
 <head>
     <title>GAMEP | Ranking</title>
     <!--meta tags -->
@@ -42,7 +42,7 @@
     <div class="header-w3layouts">
         <div class="container">
             <div class="hedder-logo" style="padding-top:30px;">
-                <a href="index.html">
+                <a href="/">
                     <img src={% static "images/Logo.png" %} class="img-fluid" alt="Responsive image">
                 </a>
                 <div class="right-side">
@@ -58,10 +58,9 @@
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="history.html">Getting Started</a></li>
+                            <li><a href="/start/">Getting Started</a></li>
                             <li><a href="/sobre/">Sobre</a></li>
                             <li><a href="">Ranking</a></li>
-                            <li><a href="gallery.html">Galeria</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -72,7 +71,7 @@
         <div class="clearfix"></div>
     </div>
 </div>
-<div class="rank"/>
+<div class="rank">
 <!--//banner -->
 <!--headder-->
 <section class="contact-inner py-lg-4 py-md-3 py-sm-3 py-3 sectionRank">
@@ -97,7 +96,7 @@
                         {% if aluno.slots_precisao == 3 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
-                        <img src={% static "images/classicon2.png"%} alt="Precissão" style="width:3%; margin-left: 15px;">
+                        <img src={% static "images/classicon2.png" %} alt="Precissão" style="width:3%; margin-left: 15px;">
                         {% if aluno.slots_precisao >= 1 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}

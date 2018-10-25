@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="pt_BR">
    <head>
       <title>GAMEP | Home</title>
       <!--meta tags -->
@@ -38,13 +38,13 @@
       <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
       <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
    </head>
-   <body>
+   <body style="background-color: #000">
       <div class="header-outs" id="home">
          <div class="header-w3layouts">
             <div class="container">
 
                <div class="hedder-logo">
-                  <a href="index.html">
+                  <a href="/">
                      <img src={% static "images/Logo.png" %} class="img-fluid" alt="Responsive image">
                    </a>
                    <div class="right-side">
@@ -60,10 +60,9 @@
                       <nav>
                          <ul>
                             <li><a href="" >Home</a></li>
-                            <li><a href="history.html" >Getting Started</a></li>
+                            <li><a href="/start/" >Getting Started</a></li>
                             <li><a href="/sobre/" >Sobre</a></li>
                             <li><a href="ranking/" >Ranking</a></li>
-                            <li><a href="gallery.html" >Galeria</a></li>
                          </ul>
                       </nav>
                    </div>
@@ -77,9 +76,9 @@
          <div class="slides text-center" style="background: #000000;">
             <div class="slide slide--current one-img ">
                <div class="slider-up">
-                  <img src="images/Logo.png" class="logoCentro" alt="">
+                  <img src={% static "images/Logo.png" %} class="logoCentro" alt="">
                   <div class="outs_more-buttn">
-                     <a href="history.html">START!</a>
+                     <a href="/start/">START!</a>
                   </div>
                </div>
                <div class="slide__img">
