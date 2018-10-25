@@ -27,7 +27,7 @@ base_urlpatterns = [
 
 urlpatterns = [
     path('{}/'.format(settings.URL_PREFIX.strip('/')), include(base_urlpatterns)),
-    re_path(r'^static/(?P<path>.*)$', serve, {
+    re_path('static/(?P<path>.*)$', serve, {
             'document_root': settings.STATIC_ROOT,
     })
 ]
