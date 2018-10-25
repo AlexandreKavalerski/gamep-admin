@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from resultados import urls as result_urls
+from django.conf import settings
 
-urlpatterns = [
+base_urlpatterns = [
     path('', include(result_urls)),
     path('admin/', admin.site.urls)
+]
+
+urlpatterns = [
+    path('{}/'.format(settings.URL_PREFIX.strip('/')), include(base_urlpatterns)),
 ]
