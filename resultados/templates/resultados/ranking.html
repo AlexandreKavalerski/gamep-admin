@@ -42,7 +42,7 @@
     <div class="header-w3layouts">
         <div class="container">
             <div class="hedder-logo" style="padding-top:30px;">
-                <a href="/">
+                <a href="/gamep/">
                     <img src={% static "images/Logo.png" %} class="img-fluid" alt="Responsive image">
                 </a>
                 <div class="right-side">
@@ -87,30 +87,30 @@
                     <br/>
                     <span style="padding-top: 40px;">
                      <img src={% static "images/classicon1.png" %} alt="Agilidade" style="width:3%;">
-                        {% if aluno.slots_precisao >= 1 %}
+                        {% if aluno.slots_precisao == 1 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
-                        {% if aluno.slots_precisao >= 2 %}
+                        {% if aluno.slots_precisao == 2 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
                         {% if aluno.slots_precisao == 3 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
                         <img src={% static "images/classicon2.png" %} alt="Precissão" style="width:3%; margin-left: 15px;">
-                        {% if aluno.slots_precisao >= 1 %}
+                        {% if aluno.slots_precisao == 1 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
-                        {% if aluno.slots_precisao >= 2 %}
+                        {% if aluno.slots_precisao == 2 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
                         {% if aluno.slots_precisao == 3 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
                         <img src={% static "images/classicon3.png" %} alt="Precissão" style="width:3%; margin-left: 15px;">
-                        {% if aluno.slots_precisao >= 1 %}
+                        {% if aluno.slots_precisao == 1 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
-                        {% if aluno.slots_precisao >= 2 %}
+                        {% if aluno.slots_precisao == 2 %}
                             <i class="fas fa-star" style="color: #ffc107"></i>
                         {% endif %}
                         {% if aluno.slots_precisao == 3 %}
