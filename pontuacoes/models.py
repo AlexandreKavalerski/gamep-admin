@@ -22,4 +22,4 @@ class AtividadeAluno(models.Model):
     precisao = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.aluno.pessoa.nome + ' - ' + self.atividade.nome
+        return ''
