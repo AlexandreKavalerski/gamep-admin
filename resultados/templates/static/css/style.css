@@ -852,8 +852,12 @@ font-size: 42px;
 }
 @media(max-width:1024px){
 .hedder-logo img {
-width: 8%;
+width: 25%;
 }
+@media(max-width:768px){
+  .hedder-logo img {
+  width: 40%;
+  }
 .footer-below a{
   color: #7BCE4D;
 }
@@ -1046,7 +1050,7 @@ height: 8em;
 }
 @media(max-width:667px){
 .hedder-logo img {
-width: 6%;
+width: 65%;
 }
 .footer-below a{
   color: #7BCE4D;
@@ -1302,7 +1306,7 @@ Leaderboard
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 300px !important;
-    padding-bottom: 550px !important;
+    padding-bottom: 2250px !important
 }
 
 .leaderboard {
@@ -1431,6 +1435,7 @@ ol{
 }
 
 .perso{
+  padding: 20px;
   background-color: #171917
 }
 
