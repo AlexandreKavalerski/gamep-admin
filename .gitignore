@@ -117,3 +117,6 @@ dmypy.json
 bts_admin/
 
 staticfiles/
+server.py
+logs/
+nginx/

@@ -8,7 +8,6 @@ from .models import *
 def index(request):
     try:
         alunos = Aluno.objects.all()
-        totais = []
         for aluno in alunos:
             try:
                 tot = NotasAluno.objects.get(aluno=aluno)
@@ -21,10 +20,12 @@ def index(request):
             aluno.slots_perfeccionismo = tot.get_slots_perfeccionismo()
             aluno.total_de_pontos = tot.get_pontuacao_total()
 
+        # Ordena o ranking: Primeiro quem tem mais pontos
+        alunos_ordenados = sorted(alunos, key=lambda aluno: aluno.total_de_pontos, reverse=True)
 
     except Aluno.DoesNotExist:
         raise Http404("Nenhum aluno encontrado")
-    return render(request, 'resultados/ranking.html', {'alunos': alunos})
+    return render(request, 'resultados/ranking.html', {'alunos': alunos_ordenados})
 
 def start(request):
     return render(request, 'resultados/history.html')

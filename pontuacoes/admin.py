@@ -12,7 +12,17 @@ class AtividadeAlunoInline(admin.TabularInline):
     model = AtividadeAluno
     extra = 0
     # raw_id_fields = ('aluno',)
-    fields = ('perfeccionismo', 'agilidade', 'precisao')
+    fields = ('nome_aluno', 'perfeccionismo', 'agilidade', 'precisao')
+    readonly_fields = ('nome_aluno', )
+
+    def nome_aluno(self, obj):
+        return obj.aluno.pessoa.nome
+
+    nome_aluno.admin_order_field = 'aluno__pessoa__nome'
+    nome_aluno.__name__ = 'Nome do Aluno'
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(Atividade)

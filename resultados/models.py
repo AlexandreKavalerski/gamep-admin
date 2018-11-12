@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from core.models import Aluno
 from pontuacoes.models import AtividadeAluno
+from resultados.constants import *
 
 
 class NotasAluno(models.Model):
@@ -25,9 +26,9 @@ class NotasAluno(models.Model):
         return total_perfeccionismo
 
     def get_pontuacao_total(self):
-        pontos_agilidade = self.get_slots_agilidade() * 1000
-        pontos_perfeccionismo = self.get_slots_perfeccionismo() * 800
-        pontos_precisao = self.get_slots_precisao() * 2000
+        pontos_agilidade = self.get_slots_agilidade() * PONTUACAO_AGILIDADE
+        pontos_perfeccionismo = self.get_slots_perfeccionismo() * PONTUACAO_PERFECCIONISMO
+        pontos_precisao = self.get_slots_precisao() * PONTUACAO_PRECISAO
 
         total_pontos = pontos_agilidade + pontos_perfeccionismo + pontos_precisao
         return total_pontos
