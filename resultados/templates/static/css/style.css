@@ -1434,6 +1434,33 @@ ol{
     -webkit-padding-start: 0px !important;
 }
 
+.logoCentro {
+  width: 80%;
+}
+
+@media (max-width: 1440px){
+  .perso{
+    padding: 120px;
+    background-color: #171917
+  }
+}
+
+@media (max-width: 1440px){
+  .logoCentro {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1440px){
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+}
+}
+
+
+
 .perso{
   padding: 20px;
   background-color: #171917
