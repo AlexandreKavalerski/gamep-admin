@@ -851,8 +851,9 @@ font-size: 42px;
 }
 }
 @media(max-width:1024px){
-.hedder-logo img {
-width: 25%;
+	.hedder-logo img {
+	width: 25%;
+	}
 }
 @media(max-width:768px){
   .hedder-logo img {
